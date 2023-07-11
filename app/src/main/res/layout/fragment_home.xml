@@ -3,12 +3,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fillViewport="true">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Discover"
+            android:textColor="@color/dark_late_gray"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/title_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="-5dp"
+            android:text="Laundry Service"
+            android:textColor="@color/dark_late_gray"
+            android:textSize="24sp"
+            android:layout_below="@+id/title"
+            />
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/title_bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_search"
+            android:gravity="center_vertical">
+            <SearchView
+                android:id="@+id/search_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@android:color/transparent"
+                android:queryHint="Search SearchView"
+                android:theme="@style/SearchView"
+                android:searchIcon="@drawable/ic_search_services"
+                app:queryBackground="@android:color/transparent"
+                />
+        </LinearLayout>
+            <ImageButton
+                android:id="@+id/button_filter"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/title_bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/bg_search"
+                android:src="@drawable/ic_filter"
+                tools:ignore="ContentDescription"
+
+                />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 </FrameLayout>

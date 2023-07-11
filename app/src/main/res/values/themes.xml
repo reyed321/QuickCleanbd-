@@ -16,4 +16,11 @@
         <item name="android:statusBarColor">@color/white</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="SearchView" parent="">
+        <item name="android:editTextColor">@color/dark_late_gray</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">16sp</item>
+        <item name="tint">@android:color/black</item>
+    </style>
+
 </resources>
