@@ -12,7 +12,7 @@
         android:theme="@style/Theme.QuickCleanBD"
         tools:targetApi="25">
         <activity
-            android:name=".activity.splash"
+            android:name=".splash"
             android:exported="false" />
         <activity
             android:name=".activity.Laundray"
