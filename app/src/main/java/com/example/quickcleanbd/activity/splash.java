@@ -28,7 +28,7 @@ public class splash extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent mySuperIntent = new Intent(splash.this, HomeFragment.class);
+                Intent mySuperIntent = new Intent(splash.this,  MainActivity.class);
                 startActivity(mySuperIntent);
 
 

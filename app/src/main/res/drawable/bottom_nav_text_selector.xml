@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Text color when selected -->
-    <item android:color="@color/white" android:state_selected="true" />
-
-    <!-- Text color when not selected -->
-    <item android:color="#C0C2C0" />
-</selector>

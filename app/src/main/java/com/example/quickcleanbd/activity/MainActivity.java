@@ -1,6 +1,6 @@
 package com.example.quickcleanbd.activity;
 
-import static com.example.quickcleanbd.R.drawable.bottom_nav_icon_selector;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -50,20 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView homeTitle = findViewById(R.id.homeTitle);
 
-        int[][] states = new int[][]{
-                new int[]{android.R.attr.state_checked}, // Checked state
-                new int[]{-android.R.attr.state_checked} // Default state
-        };
 
-        @SuppressLint("ResourceType") int[] colors = new int[]{
-                ContextCompat.getColor(this, bottom_nav_icon_selector),
-                ContextCompat.getColor(this, R.color.black)
-        };
 
-        ColorStateList iconTintColors = new ColorStateList(states, colors);
-        homeIcon.setImageTintList(iconTintColors);
-        searchIcon.setImageTintList(iconTintColors);
-        notificationIcon.setImageTintList(iconTintColors);
+
 
 
 
@@ -71,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.container, new HomeFragment());
         fragmentTransaction.commit();
         homeButton.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceAsColor")
+
             @Override
             public void onClick(View view) {
                 loadFragment(new HomeFragment());

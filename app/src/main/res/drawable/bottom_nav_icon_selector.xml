@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Icon color when item is selected -->
-    <item android:color="#283D4E" android:state_checked="true" />
-    <!-- Icon color when item is not selected -->
-    <item android:color="@color/default_icon_color" />
-</selector>

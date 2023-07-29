@@ -59,7 +59,6 @@
                                     android:src="@drawable/home"
                                     android:padding="12dp"
                                     android:layout_gravity="center"
-                                    app:tint="@color/default_icon_color"
                                     />
 
                         </LinearLayout>
