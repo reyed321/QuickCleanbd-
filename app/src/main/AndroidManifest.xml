@@ -11,9 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickCleanBD"
         tools:targetApi="25">
+
+
         <activity
-            android:name=".splash"
-            android:exported="false" />
+            android:name=".activity.splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".activity.Laundray"
             android:exported="false" />
@@ -44,11 +53,8 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 
