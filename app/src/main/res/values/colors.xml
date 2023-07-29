@@ -13,4 +13,12 @@
     <color name="orange">#f7991b</color>
     <color name="dark_gray">#A9A9A9</color>
     <color name="dark_late_gray">#2b3e50</color>
+
+<!-- Colors -->
+<color name="default_icon_color">#C0C2C0</color>
+<color name="default_text_color">#C0C2C0</color>
+
+    <color name="selected_icon_color">#283D4E</color>
+    <color name="selected_text_color">#283D4E</color>
 </resources>
+

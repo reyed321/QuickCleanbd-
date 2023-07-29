@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,252 @@
     >
 
 
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBaseline_toTopOf="@id/bottomNav"/>
+
+
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_bottom_navigation"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            >
+
+                <LinearLayout
+                    android:id="@+id/homeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+
+                    >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:gravity="center|bottom"
+                            android:layout_weight=".6">
+                                <ImageView
+                                    android:id="@+id/homeIcon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/home"
+                                    android:padding="12dp"
+                                    android:layout_gravity="center"
+                                    app:tint="@color/default_icon_color"
+                                    />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4">
+
+                                <TextView
+                                    android:id="@+id/homeTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Home"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="12dp"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="5dp"
+                                    />
+
+
+                        </LinearLayout>
 
 
 
-</fragment>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/searchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:gravity="center|bottom"
+                            android:layout_weight=".6">
+                                <ImageView
+                                    android:id="@+id/searchIcon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/search"
+                                    android:padding="12dp"
+                                    android:layout_gravity="center"
+                                    />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Search"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="12dp"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="5dp"
+                                    />
+
+
+                        </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notificationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:gravity="center|bottom"
+                            android:layout_weight=".6">
+                                <ImageView
+                                    android:id="@+id/notificationIcon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/notification"
+                                    android:padding="12dp"
+                                    android:layout_gravity="center"
+                                    />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Notification"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="12dp"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="5dp"
+                                    />
+
+
+                        </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/messageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:gravity="center|bottom"
+                            android:layout_weight=".6">
+                                <ImageView
+                                    android:id="@+id/messageIcon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/message"
+                                    android:padding="12dp"
+                                    android:layout_gravity="center"
+                                    />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Message"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/dark_gray"
+                                    android:textSize="12dp"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="5dp"
+                                    />
+
+
+                        </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

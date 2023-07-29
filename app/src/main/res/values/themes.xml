@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.QuickCleanBD" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.QuickCleanBD" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,9 +12,11 @@
 <!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
 <!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
 
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
+
     </style>
     <style name="SearchView" parent="">
         <item name="android:editTextColor">@color/dark_late_gray</item>
