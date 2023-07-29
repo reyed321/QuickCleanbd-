@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
         @SuppressLint("ResourceType") int[] colors = new int[]{
                 ContextCompat.getColor(this, bottom_nav_icon_selector),
-                ContextCompat.getColor(this, R.color.default_icon_color)
+                ContextCompat.getColor(this, R.color.black)
         };
 
         ColorStateList iconTintColors = new ColorStateList(states, colors);
