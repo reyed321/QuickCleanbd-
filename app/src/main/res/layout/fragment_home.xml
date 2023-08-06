@@ -220,27 +220,44 @@
             android:layout_below="@+id/container_choose_service"
             android:background="@drawable/bg_half_rounded2">
 
-            <TextView
-                android:id="@+id/recommended"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/nunito_black"
-                android:text="@string/recommended"
-                android:textColor="@color/dark_late_gray"
-                android:textSize="16sp"
-                android:textStyle="bold" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview_recommended"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/recommended"
-                android:layout_marginTop="10dp"
-                android:clipToPadding="false"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp" />
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/recommended"
+                    android:textColor="#4B4C4C"
+                    android:textSize="@dimen/_16font_mdp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:clipToPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recommended"
+                    android:scrollbars="horizontal"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
         </RelativeLayout>
 
