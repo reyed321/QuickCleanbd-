@@ -6,4 +6,379 @@
     android:layout_height="match_parent"
     tools:context=".activity.Laundray">
 
+
+    <LinearLayout
+        android:id="@+id/laundryImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_210mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/img_5"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/go_bak_home"
+            android:layout_width="@dimen/_30mdp"
+            android:layout_height="@dimen/_30mdp"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            />
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_190mdp"
+        android:background="@drawable/bg_bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/laundryDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Papa Laundry"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22font_mdp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/_18mdp"
+                    android:layout_height="@dimen/_16mdp"
+                    android:src="@drawable/ic_location"
+                    android:layout_marginLeft="-3dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/_202mdp"
+                    android:text="Turag , Beribadh , Dhaka-1230 (1.3 km)"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:rating="3"
+                    android:theme="@style/RatingBar"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5"
+                    android:transformPivotX="0dp"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 Stars"
+                    android:layout_marginLeft="-110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-12dp"
+                    android:fontFamily="sans-serif"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/love_bg_shape"
+            android:elevation="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_25mdp"
+                android:src="@drawable/ic_heart"
+                android:layout_gravity="center"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/workPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18font_mdp"
+            android:text="Work Period"
+            app:layout_constraintTop_toBottomOf="@id/laundryDetails"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#081768"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <LinearLayout
+            android:id="@+id/laundryWork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workPeriod"
+            android:layout_marginTop="10dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="@dimen/_90mdp"
+                    android:layout_height="wrap_content"
+                    android:text="Weekly"
+                    android:background="@drawable/selected_button_bg_laundry"
+                    android:textColor="@color/white"
+                    android:textAllCaps="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/weeklyButton"
+                    />
+
+                <Button
+                    android:id="@+id/biweeklyButton"
+                    android:layout_width="@dimen/wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_laundry_unselected"
+                    android:letterSpacing=".08"
+                    android:text="BiWeekly"
+                    android:textAllCaps="false"
+                    android:textColor="#838383"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/monthlyButton"
+                    app:layout_constraintStart_toEndOf="@+id/weeklyButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <Button
+                    android:id="@+id/monthlyButton"
+                    android:layout_width="@dimen/_85mdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_laundry_unselected"
+                    android:text="Monthly"
+                    android:textColor="#838383"
+                    android:textAllCaps="false"
+                    android:letterSpacing=".08"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/wrokTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18font_mdp"
+            android:text="Work Time"
+            app:layout_constraintTop_toBottomOf="@id/laundryWork"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="#081768"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/laundryWrokTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wrokTime"
+            android:layout_marginTop="10dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="@dimen/_85mdp"
+                    android:layout_height="wrap_content"
+                    android:text="07.00"
+                    android:background="@drawable/button_bg_laundry_unselected"
+                    android:textColor="#838383"
+                    android:textAllCaps="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/morning"
+                    />
+
+                <Button
+                    android:id="@+id/afternoon"
+                    android:layout_width="@dimen/_85mdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selected_button_bg_laundry"
+                    android:letterSpacing=".08"
+                    android:text="10.00"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/evening"
+                    app:layout_constraintStart_toEndOf="@+id/morning"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/evening"
+                    android:layout_width="@dimen/_85mdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_bg_laundry_unselected"
+                    android:text="14.00"
+                    android:textColor="#838383"
+                    android:textAllCaps="false"
+                    android:letterSpacing=".08"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+               <View
+                   android:id="@+id/callView"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   android:background="@drawable/circle_button_bg"
+                   />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/callView"
+                    app:layout_constraintTop_toTopOf="@id/callView"
+                    app:layout_constraintEnd_toEndOf="@id/callView"
+                    app:layout_constraintBottom_toBottomOf="@id/callView"
+                    android:src="@drawable/ic_call"/>
+
+
+
+                <View
+                    android:id="@+id/messageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintStart_toEndOf="@id/callView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/circle_button_bg"
+                    app:layout_constraintEnd_toStartOf="@id/appointmentButton"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/messageView"
+                    app:layout_constraintTop_toTopOf="@id/messageView"
+                    app:layout_constraintEnd_toEndOf="@id/messageView"
+                    app:layout_constraintBottom_toBottomOf="@id/messageView"
+                    android:src="@drawable/ic_message"/>
+
+
+
+                <Button
+                    android:id="@+id/appointmentButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selected_button_bg_laundry"
+                    android:text="Make a Appointment"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"
+                    android:letterSpacing=".08"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

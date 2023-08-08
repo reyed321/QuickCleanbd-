@@ -25,4 +25,19 @@
         <item name="tint">@android:color/black</item>
     </style>
 
+    <style name="RatingBar" parent="Widget.AppCompat.RatingBar">
+
+        <item name="colorButtonNormal">#4D000000</item>
+        <item name="colorControlActivated">#F7991B</item>
+
+        <item name="android:minHeight">10dp</item> <!-- Adjust star height -->
+        <item name="android:minWidth">10dp</item>
+
+    </style>
+
+    <style name="MyButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:elevation">0dp</item> <!-- Disable shadow -->
+        <!-- Other attributes -->
+    </style>
+
 </resources>

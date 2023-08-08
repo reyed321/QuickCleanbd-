@@ -20,11 +20,24 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
 
     private Context context;
     private List<RecommendedModel> itemList;
+    private  OnItemClickListener listener;
 
-    public RecommendedAdapter(List<RecommendedModel> itemList, Context context) {
-        this.itemList = itemList;
-        this.context = context;
+
+
+
+    public interface OnItemClickListener{
+        void onItemClick(int posistion);
     }
+
+
+
+    public RecommendedAdapter(Context context, List<RecommendedModel> itemList, OnItemClickListener listener) {
+        this.context = context;
+        this.itemList = itemList;
+        this.listener = listener;
+    }
+
+
 
     @NonNull
     @Override
@@ -68,6 +81,19 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
             laundryLocationIcon = itemView.findViewById(R.id.laundryLocationIcon);
             distanceText = itemView.findViewById(R.id.distanceText);
             distanceCount = itemView.findViewById(R.id.distanceCount);
+
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (listener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            listener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 
