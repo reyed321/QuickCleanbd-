@@ -83,10 +83,10 @@
 
                 <ImageView
                     android:id="@+id/laundryLocationIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/_18mdp"
+                    android:layout_height="@dimen/_16mdp"
                     android:src="@drawable/ic_location"
-                    android:layout_marginStart="@dimen/_21mdp"
+                    android:layout_marginStart="@dimen/_18mdp"
 
                     />
 

@@ -1,5 +1,7 @@
 package com.example.quickcleanbd.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,9 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.example.quickcleanbd.Model.RecommendedModel;
 import com.example.quickcleanbd.R;
+import com.example.quickcleanbd.activity.Laundray;
 import com.example.quickcleanbd.adapter.RecommendedAdapter;
 
 import java.util.ArrayList;
@@ -22,6 +27,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
     private RecommendedAdapter recommendedAdapter;
     private List<RecommendedModel> itemList;
+
 
 
     public HomeFragment() {
@@ -47,7 +53,14 @@ public class HomeFragment extends Fragment {
        itemList.add(new RecommendedModel(R.drawable.img_4,"Papa Laundry","$30-$40","1.5 Km"));
 
 
-        recommendedAdapter = new RecommendedAdapter(itemList,getContext());
+        recommendedAdapter = new RecommendedAdapter(getContext(), itemList, new RecommendedAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int posistion) {
+                Intent intent = new Intent(getContext(), Laundray.class);
+                startActivity(intent);
+            }
+        });
+
         recyclerView.setAdapter(recommendedAdapter);
 
         return view;
