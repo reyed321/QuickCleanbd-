@@ -14,4 +14,6 @@
     <string name="wash_and_iron"><![CDATA[Wash & Iron]]></string>
     <string name="ironing">Ironing</string>
     <string name="choose_services">Choose Services</string>
+    <string name="title_activity_map">map</string>
+    <string name="title_activity_search">Search</string>
 </resources>

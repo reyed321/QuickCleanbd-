@@ -1,68 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-   <androidx.cardview.widget.CardView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:clipToPadding="false"
-       app:cardCornerRadius="20dp"
-       app:cardElevation="0dp">
-       <RelativeLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent">
-       <ImageView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:scaleType="centerCrop"
-           android:src="@drawable/bg_map"/>
-            <LinearLayout
-            android:id="@+id/search"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_search2"
-            android:gravity="center_vertical">
 
-           <SearchView
-            android:id="@+id/search_recipe"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:iconifiedByDefault="false"
-            android:queryBackground="@android:color/transparent"
-            android:queryHint="Search by name"
-            android:searchIcon="@drawable/ic_search_services"
-            android:theme="@style/SearchView"
-            app:queryBackground="@android:color/transparent" />
+    <fragment xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.Search" />
 
-            </LinearLayout>
-           <ImageView
-               android:layout_centerHorizontal="true"
-               android:layout_marginTop="150dp"
-               android:src="@drawable/ic_location"
-               android:layout_width="20dp"
-               android:layout_height="20dp"/>
-           <View
-            android:layout_marginTop="250dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="100dp"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:background="@drawable/bg_item_rounded"/>
 
-              <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_maps"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-       </RelativeLayout>
-   </androidx.cardview.widget.CardView>
-</FrameLayout>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/idSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#BFBFBF"
+        android:elevation="5dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search Here" />
+
+
+
+</RelativeLayout>
