@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.quickcleanbd.Model.RecommendedModel;
@@ -23,6 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
+
+
+    ImageView image_1;
 
     private RecyclerView recyclerView;
     private RecommendedAdapter recommendedAdapter;
@@ -65,6 +69,7 @@ public class HomeFragment extends Fragment {
 
         return view;
     }
+    
 
 
 }

@@ -7,14 +7,5 @@
 
     android:background="@color/light_sea_green">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Notification Fragment"
-        android:textColor="@color/white"
-        android:gravity="center"
-        android:textSize="60sp"
-        />
 
 </FrameLayout>
