@@ -1,9 +1,12 @@
 package com.example.quickcleanbd.activity;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+import android.widget.ImageView;
 
+import androidx.appcompat.app.WindowDecorActionBar;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.FragmentActivity;
 
@@ -22,6 +25,7 @@ import java.util.List;
 public class Search extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private ImageView imageView;
 
    private SearchView searchView;
     private ActivitySearchBinding binding;
@@ -30,6 +34,17 @@ public class Search extends FragmentActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+
+        Intent intent = getIntent();
+        String s = intent.getStringExtra("key");
+        searchView.setTag(s);
+
+        
+
+
+
+
 
         searchView = findViewById(R.id.SearchView);
 
