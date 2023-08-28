@@ -28,13 +28,14 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".Search"
-            android:exported="false"
-            android:label="@string/title_activity_search" />
+            android:name=".activity.Search"
+            android:exported="false" />
+
         <activity
             android:name=".map"
             android:exported="false"
             android:label="@string/title_activity_map" />
+
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">

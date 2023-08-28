@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,8 +14,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.SearchView;
+
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.quickcleanbd.Model.RecommendedModel;
@@ -74,7 +77,7 @@ public class HomeFragment extends Fragment {
         recyclerView.setAdapter(recommendedAdapter);
 
         ImageView imag1 = view.findViewById(R.id.image_1);
-        Ironing Ironing = (com.example.quickcleanbd.activity.Ironing) getActivity();
+
         imag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,12 +86,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        SearchView search = view.findViewById(R.id.search);
+
+        ConstraintLayout search = view.findViewById(R.id.searchArea);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),Search.class);
-                intent.putExtra("Key",searchView.getQuery().toString());
+                Intent intent = new Intent(getContext(), Search.class); // Use requireContext()
+
                 startActivity(intent);
             }
         });
