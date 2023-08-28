@@ -3,12 +3,9 @@ package com.example.quickcleanbd.activity;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.annotation.SuppressLint;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -19,10 +16,6 @@ import com.example.quickcleanbd.R;
 import com.example.quickcleanbd.fragments.HomeFragment;
 import com.example.quickcleanbd.fragments.MessageFragment;
 import com.example.quickcleanbd.fragments.NotificationFragment;
-import com.example.quickcleanbd.fragments.SearchFragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -68,12 +61,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        searchButton.setOnClickListener(new View.OnClickListener() {
+       /* searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loadFragment(new SearchFragment());
             }
         });
+
+
+        */
 
         notificationButton.setOnClickListener(new View.OnClickListener() {
             @Override

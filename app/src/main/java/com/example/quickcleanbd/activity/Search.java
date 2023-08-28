@@ -40,11 +40,6 @@ public class Search extends FragmentActivity implements OnMapReadyCallback {
 //        String s = intent.getStringExtra("key");
 //        searchView.setTag(s);
 
-        
-
-
-
-
 
         searchView = findViewById(R.id.SearchView);
 
