@@ -16,9 +16,13 @@
 
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/idSearchView"
+        android:id="@+id/SearchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_margin="10dp"
         android:background="#BFBFBF"
         android:elevation="5dp"
